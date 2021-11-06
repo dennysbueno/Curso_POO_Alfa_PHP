@@ -9,21 +9,11 @@ class ImpressoraDebug
         $this->_filterDir = $filterDir;
     }
 
-    public function imprimirExemplos()
+    public function imprimirGenerico(string $nome)
     {
-        return $this->imprimirGenerico($this->_filterDir->getArrExamples(), 'Exemplos');
-    }
+        echo '<b> '.ucfirst($nome).' </b> <br>';
 
-    public function imprimirExercicios()
-    {
-        return $this->imprimirGenerico($this->_filterDir->getArrExercicios(), 'Exercicios');
-    }
-
-    private function imprimirGenerico(array $arr, string $nome)
-    {
-        echo "<b> $nome </b> <br>";
-
-        foreach($arr as $nomePasta => $diretorio)
+        foreach($this->_filterDir->getArrayElementByFilterTag($nome) as $nomePasta => $diretorio)
         {
             echo '<br>';
             echo "<a href='$diretorio'> $nomePasta </a>";

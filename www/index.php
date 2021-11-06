@@ -7,8 +7,6 @@ $projectDir = new ProjectDir(__DIR__, 'index.php');
 $FilterDir = new FilterDir($projectDir);
 $ImpressoraDebug = new ImpressoraDebug($FilterDir);
 
-
-$ImpressoraDebug->imprimirExemplos();
-
+$ImpressoraDebug->imprimirGenerico('exemplos');
 echo '<br> <br>';
-$ImpressoraDebug->imprimirExercicios();
+$ImpressoraDebug->imprimirGenerico('exercicios');

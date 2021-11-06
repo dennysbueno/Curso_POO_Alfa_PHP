@@ -9,17 +9,7 @@ class FilterDir
         $this->_projectDir = $projectDir;
     }
 
-    public function getArrExamples() : array
-    {
-        return $this->removeArrayElementByTag('exemplos');
-    }
-
-    public function getArrExercicios() : array
-    {
-        return $this->removeArrayElementByTag('exercicios');
-    }
-
-    public function removeArrayElementByTag(string $filter)
+    public function getArrayElementByFilterTag(string $filter)
     {
         $newFile = [];
         foreach($this->_projectDir->getArrFilePath() as $key => $filePathName)
