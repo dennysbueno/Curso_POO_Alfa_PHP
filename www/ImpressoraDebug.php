@@ -13,7 +13,7 @@ class ImpressoraDebug
     {
         echo '<b> '.ucfirst($nome).' </b> <br>';
 
-        foreach($this->_filterDir->getArrayElementByFilterTag($nome) as $nomePasta => $diretorio)
+        foreach($this->_filterDir->getArrayByFilterTag($nome) as $nomePasta => $diretorio)
         {
             echo '<br>';
             echo "<a href='$diretorio'> $nomePasta </a>";

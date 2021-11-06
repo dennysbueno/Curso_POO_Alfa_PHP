@@ -9,7 +9,7 @@ class FilterDir
         $this->_projectDir = $projectDir;
     }
 
-    public function getArrayElementByFilterTag(string $filter)
+    public function getArrayByFilterTag(string $filter)
     {
         $newFile = [];
         foreach($this->_projectDir->getArrFilePath() as $key => $filePathName)
