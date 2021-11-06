@@ -1,7 +1,7 @@
 <?php
 class Usuario
 {
-    public string $nomeUsuario;
+    public $nomeUsuario;
     public int $idadeUsuario;
     private Endereco $endereco;
     public DateTime $dataNascimento;
@@ -23,6 +23,12 @@ class Usuario
 
     public function retornaOEnderecoDoCliente() : string
     {
+        return $this->endereco->retornarEndereco();
+    }
+
+    public function exemplo() : string
+    {
+       
         return $this->endereco->retornarEndereco();
     }
 }
